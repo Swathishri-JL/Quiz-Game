@@ -147,6 +147,7 @@ game:
 		case 1:
 		printf("\n\nWhat is the National Game of England?");
 		printf("\n\nA.Football\t\tB.Basketball\n\nC.Cricket\t\tD.Baseball");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='C')
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -159,6 +160,7 @@ game:
 		case 2:
 		printf("\n\n\nStudy of Earthquake is called............,");
 		printf("\n\nA.Seismology\t\tB.Cosmology\n\nC.Orology\t\tD.Etimology");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='A')
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -172,6 +174,7 @@ game:
         case 3:
 		printf("\n\n\nAmong the top 10 highest peaks in the world, how many lie in Nepal? ");
 		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.9");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='C')
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -184,6 +187,7 @@ game:
         case 4:
 		printf("\n\n\nThe Laws of Electromagnetic Induction were given by?");
 		printf("\n\nA.Faraday\t\tB.Tesla\n\nC.Maxwell\t\tD.Coulomb");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='A')
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -198,6 +202,7 @@ game:
         case 5:
 		printf("\n\n\nIn what unit is electric power measured?");
 		printf("\n\nA.Coulomb\t\tB.Watt\n\nC.Power\t\tD.Units");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='B')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
@@ -212,6 +217,7 @@ game:
 		case 6:
 		printf("\n\n\nWhich element is found in Vitamin B12?");
 		printf("\n\nA.Zinc\t\tB.Cobalt\n\nC.Calcium\t\tD.Iron");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='B' )
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -224,6 +230,7 @@ game:
         case 7:
 		printf("\n\n\nWhat is the National Name of Japan?");
 		printf("\n\nA.Polska\t\tB.Hellas\n\nC.Drukyul\t\tD.Nippon");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='D')
 			{printf("\n\nCorrect!!!");countr++;getch();
@@ -236,6 +243,7 @@ game:
         case 8:
 		printf("\n\n\nHow many times a piece of paper can be folded at the most?");
 		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.Depends on the size of paper");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='B')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
@@ -247,6 +255,7 @@ game:
         case 9:
 		printf("\n\n\nWhat is the capital of Denmark?");
 		printf("\n\nA.Copenhagen\t\tB.Helsinki\n\nC.Ajax\t\tD.Galatasaray");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='A')
 			{printf("\n\nCorrect!!!");countr++; getch();
@@ -259,6 +268,7 @@ game:
         case 10:
 		printf("\n\n\nWhich is the longest River in the world?");
 		printf("\n\nA.Nile\t\tB.Koshi\n\nC.Ganga\t\tD.Amazon");
+		printf("\n\nEnter the option of your Answer:\t");
 		scanf("%c",&ans);
 		if (ans=='A')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
@@ -338,8 +348,7 @@ void help()
     printf("\n >> You will be asked questions continuously if you keep giving the right answers.");
     printf("\n >> No negative marking for wrong answers");
 
-	printf("\n\n\t*********************BEST OF LUCK*********************************");
-	printf("\n\n\t*****C PROGRAM QUIZ GAME is developed by CODE WITH C TEAM********");}
+	printf("\n\n\t*********************BEST OF LUCK*********************************");}
 
 void edit_score(float score, char plnm[20])
 	{system("cls");
