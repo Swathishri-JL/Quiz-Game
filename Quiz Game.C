@@ -1,292 +1,132 @@
 #include<stdio.h>
 #include<conio.h>
-#include<stdlib.h>
 #include<string.h>
+#include<stdlib.h>
 void show_record();
 void reset_score();
 void help();
 void edit_score(float , char []);
 int main()
-     {
-     int countr,r,r1,count,i,n;
-     float score;
-     char choice;
-     char playername[20];
-     
-     mainhome:
-     printf("\t\t\tC PROGRAM QUIZ GAME\n");
-     printf("\n\t\t________________________________________");
-
-     printf("\n\t\t\t   WELCOME ");
-     printf("\n\t\t\t      to ");
-     printf("\n\t\t\t   THE GAME ");
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t   BECOME A MILLIONAIRE!!!!!!!!!!!    ") ;
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t > Press S to start the game");
-     printf("\n\t\t > Press V to view the highest score  ");
-     printf("\n\t\t > Press R to reset score");
-     printf("\n\t\t > press H for help            ");
-     printf("\n\t\t > press Q to quit             ");
-     printf("\n\t\t________________________________________\n\n");
-     scanf("%c",&choice);
-     if (choice=='V')
-	{
-	show_record();
-	goto mainhome;
-	}
-     else if (choice=='H')
-	{
-	help();getch();
-	goto mainhome;
-	}
-	else if (choice=='R')
-	{reset_score();
-	getch();
-	goto mainhome;}
-	else if (choice=='Q')
-	exit(1);
+{
+    int i,r,count,count2;
+    float score;
+    char choice, playername[20];
+    mainhome:
+    printf("\t\t\tC PROGRAM QUIZ GAME\n");
+    printf("\n\t\t________________________________________");
+    printf("\n\t\t\t   WELCOME ");
+    printf("\n\t\t\t      to ");
+    printf("\n\t\t\t   THE GAME ");
+    printf("\n\t\t________________________________________");
+    printf("\n\t\t________________________________________");
+    printf("\n\t\t   BECOME A MILLIONAIRE!!!!!!!!!!!    ") ;
+    printf("\n\t\t________________________________________");
+    printf("\n\t\t________________________________________");
+    printf("\n\t\t > Press S to start the game");
+    printf("\n\t\t > Press V to view the highest score  ");
+    printf("\n\t\t > Press R to reset score");
+    printf("\n\t\t > press H for help            ");
+    printf("\n\t\t > press Q to quit             ");
+    printf("\n\t\t________________________________________\n\n");
+    scanf("%c",&choice);
+    if(choice=='V'){
+        show_record();}
+    else if(choice=='R'){
+        reset_score();}
+    else if(choice=='H'){
+        help();}
+    else if(choice=='Q'){
+        exit(1);}
     else if(choice=='S')
     {
-
-    printf("\n\n\n\n\n\n\n\n\n\n\t\t\tResister your name:");
-    scanf("%s",playername);
-
-    printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",playername);
-    printf("\n\n Here are some tips you might wanna know before playing:");
-    printf("\n -------------------------------------------------------------------------");
-    printf("\n >> There are 2 rounds in this Quiz Game,WARMUP ROUND & CHALLANGE ROUND");
-    printf("\n >> In warmup round you will be asked a total of 3 questions to test your");
-    printf("\n    general knowledge. You are eligible to play the game if you give atleast 1");
-    printf("\n    right answer, otherwise you can't proceed further to the Challenge Round.");
-    printf("\n >> Your game starts with CHALLANGE ROUND. In this round you will be asked a");
-    printf("\n    total of 10 questions. Each right answer will be awarded $100,000!");
-    printf("\n    By this way you can win upto ONE MILLION cash prize!!!!!..........");
-    printf("\n >> You will be given 4 options and you have to press A, B ,C or D for the");
-    printf("\n    right option.");
-    printf("\n >> You will be asked questions continuously, till right answers are given");
-    printf("\n >> No negative marking for wrong answers!");
-    printf("\n\n\t!!!!!!!!!!!!! ALL THE BEST !!!!!!!!!!!!!");
-    
-     quiz:
-     system("cls");
-     count=0;
-     for(i=1;i<=3;i++)
-     {
-    system("cls");
-     r1=i;
-     char ans;
-
-     switch(r1)
-		{
-		case 1:
-		printf("\n\nWhich of the following is a Palindrome number?");
+        printf("\n\n\n\n\n\n\n\n\n\n\t\t\tResister your name:");
+        scanf("%s",playername);
+        printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",playername);
+        printf("\n\n Here are some tips you might wanna know before playing:");
+        printf("\n -------------------------------------------------------------------------");
+        printf("\n >> There are 2 rounds in this Quiz Game,WARMUP ROUND & CHALLANGE ROUND");
+        printf("\n >> In warmup round you will be asked a total of 3 questions to test your");
+        printf("\n    general knowledge. You are eligible to play the game if you give atleast 1");
+        printf("\n    right answer, otherwise you can't proceed further to the Challenge Round.");
+        printf("\n >> Your game starts with CHALLANGE ROUND. In this round you will be asked a");
+        printf("\n    total of 10 questions. Each right answer will be awarded $100,000!");
+        printf("\n    By this way you can win upto ONE MILLION cash prize!!!!!..........");
+        printf("\n >> You will be given 4 options and you have to press A, B ,C or D for the");
+        printf("\n    right option.");
+        printf("\n >> You will be asked questions continuously, till right answers are given");
+        printf("\n >> No negative marking for wrong answers!");
+        printf("\n\n\t!!!!!!!!!!!!! ALL THE BEST !!!!!!!!!!!!!");
+        quiz:
+        count=0;
+     	printf("\n\nWhich of the following is a Palindrome number?");
 		printf("\n\nA.42042\t\tB.101010\n\nC.23232\t\tD.01234");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='C'){
+		printf("\n\nEnter the option of your Answer:\t"); char ans1;
+		scanf("%c",&ans1);
+		if (ans1=='C'){
 			    printf("\n\nCorrect!!!");count++;
-			    getch();
-			    break;}
+			    getch();}
 		else{
 		      printf("\n\nWrong!!! The correct answer is C.23232");
-		      getch();
-		      break;}
-
-        case 2:
+		      getch();}
 		printf("\n\n\nThe country with the highest environmental performance index is...");
 		printf("\n\nA.France\t\tB.Denmark\n\nC.Switzerland\t\tD.Finland");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='C')
+		printf("\n\nEnter the option of your Answer:\t"); char ans2;
+		scanf("%c",&ans2);
+		if (ans2=='C')
 			{printf("\n\nCorrect!!!");count++;
-			getch();
-			break;}
+			getch();}
 		else
 		       {printf("\n\nWrong!!! The correct answer is C.Switzerland");
-		       getch();
-		       break;}
-
-        case 3:
+		       getch();}
 		printf("\n\n\nWhich animal laughs like human being?");
 		printf("\n\nA.Polar Bear\t\tB.Hyena\n\nC.Donkey\t\tD.Chimpanzee");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='B')
+		printf("\n\nEnter the option of your Answer:\t"); char ans3;
+		scanf("%c",&ans3);
+		if (ans3=='B')
 			{printf("\n\nCorrect!!!");count++;
-			getch();
-			break;}
+			getch();}
 		else
 		       {printf("\n\nWrong!!! The correct answer is B.Hyena");
-		       getch();
-		       break;}}}
-
-	if(count>=1)
-	{goto test;}
-	else
-	{
-	system("cls");
-	printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
-	getch();
-	goto mainhome;
-	}
-     test:
-     system("cls");
-     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Game ***",playername);
-     
-game:
-     countr=0;
-     for(i=1;i<=10;i++)
-     {r=i;
-     char ans;
-
-     switch(r)
-		{
-		case 1:
-		printf("\n\nWhat is the National Game of England?");
+		       getch();}
+		if(count>=1)
+		{goto test;}
+		else{
+		    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+		    getch();
+		    exit(1);}
+        test:
+        printf("\n\n\t*** CONGRATULATION %s you are eligible to play the next level ***",playername);
+        game:
+        count2=0;
+     	printf("\n\nWhat is the National Game of England?");
 		printf("\n\nA.Football\t\tB.Basketball\n\nC.Cricket\t\tD.Baseball");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='C')
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;getch();}
+		printf("\n\nEnter the option of your Answer:\t"); char ans4;
+		scanf("%c",&ans4);
+		if (ans4=='C')
+			{printf("\n\nCorrect!!!");count2++;getch();}
 		else
 		       {printf("\n\nWrong!!! The correct answer is C.Cricket");getch();
-		       goto score;
-		       break;}
-
-		case 2:
+		       goto score;}
 		printf("\n\n\nStudy of Earthquake is called............,");
 		printf("\n\nA.Seismology\t\tB.Cosmology\n\nC.Orology\t\tD.Etimology");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='A')
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;}
+		printf("\n\nEnter the option of your Answer:\t"); char ans5;
+		scanf("%c",&ans5);
+		if (ans5=='A')
+			{printf("\n\nCorrect!!!");count2++;getch();}
 		else
 		       {printf("\n\nWrong!!! The correct answer is A.Seismology");getch();
-		      goto score;
-		       break;
-		       }
-
-        case 3:
-		printf("\n\n\nAmong the top 10 highest peaks in the world, how many lie in Nepal? ");
-		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.9");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='C')
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is C.8");getch();
-		       goto score;
-		       break;}
-
-        case 4:
-		printf("\n\n\nThe Laws of Electromagnetic Induction were given by?");
-		printf("\n\nA.Faraday\t\tB.Tesla\n\nC.Maxwell\t\tD.Coulomb");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='A')
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;}
-		else
-		       {
-                printf("\n\nWrong!!! The correct answer is A.Faraday");getch();
-		       goto score;
-		       break;
-		       }
-
-        case 5:
-		printf("\n\n\nIn what unit is electric power measured?");
-		printf("\n\nA.Coulomb\t\tB.Watt\n\nC.Power\t\tD.Units");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='B')
-			{printf("\n\nCorrect!!!");countr++;getch(); break;}
-		else
-		       {
-		           printf("\n\nWrong!!! The correct answer is B.Power");
-		       getch();
-		       goto score;
-		       break;
-		       }
-
-		case 6:
-		printf("\n\n\nWhich element is found in Vitamin B12?");
-		printf("\n\nA.Zinc\t\tB.Cobalt\n\nC.Calcium\t\tD.Iron");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='B' )
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is B.Cobalt");goto score;
-		       getch();
-		       break;}
-
-        case 7:
-		printf("\n\n\nWhat is the National Name of Japan?");
-		printf("\n\nA.Polska\t\tB.Hellas\n\nC.Drukyul\t\tD.Nippon");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='D')
-			{printf("\n\nCorrect!!!");countr++;getch();
-			 break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is D.Nippon");getch();
-		       goto score;
-		       break;}
-
-        case 8:
-		printf("\n\n\nHow many times a piece of paper can be folded at the most?");
-		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.Depends on the size of paper");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='B')
-			{printf("\n\nCorrect!!!");countr++;getch(); break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is B.7");getch();
-		       goto score;
-		       break;}
-
-        case 9:
-		printf("\n\n\nWhat is the capital of Denmark?");
-		printf("\n\nA.Copenhagen\t\tB.Helsinki\n\nC.Ajax\t\tD.Galatasaray");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='A')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is A.Copenhagen");getch();
-		       goto score;
-		       break;}
-
-        case 10:
-		printf("\n\n\nWhich is the longest River in the world?");
-		printf("\n\nA.Nile\t\tB.Koshi\n\nC.Ganga\t\tD.Amazon");
-		printf("\n\nEnter the option of your Answer:\t");
-		scanf("%c",&ans);
-		if (ans=='A')
-			{printf("\n\nCorrect!!!");countr++;getch(); break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is A.Nile");getch();break;
-		       goto score;}}}
-	score:
-    system("cls");
-	score=(float)countr*100000;
-	if(score>0.00 && score<1000000)
+		        goto score;}
+        score:
+        score=(float)count2*100000;
+	if((score>0.00) && (score<300000))
 	{
 	   printf("\n\n\t\t**************** CONGRATULATION *****************");
 	     printf("\n\t You won $%.2f",score);goto go;}
 
-	 else if(score==1000000.00)
+	 else if(score==300000.00)
 	{
 	    printf("\n\n\n \t\t**************** CONGRATULATION ****************");
-	    printf("\n\t\t\t\t YOU ARE A MILLIONAIRE!!!!!!!!!");
+	    printf("\n\t\t\t\t YOU ARE A SUPER DUPER WINNER!!!!!!!!!");
 	    printf("\n\t\t You won $%.2f",score);
 	    printf("\t\t Thank You!!");
 	}
@@ -297,7 +137,7 @@ game:
 	    printf("\n\t\t TRY AGAIN");goto go;}
 
 	go:
-	puts("\n\n Press Y if you want to play next game");
+	puts("\n\n Press Y if you want to play again");
 	puts(" Press any key if you want to exit");
 	char a; scanf("%c",&a);
 	if (a=='Y')
@@ -305,11 +145,10 @@ game:
 	else
 		{
 		edit_score(score,playername);
-		exit(1);}}}
-
+		exit(1);}
+        return 0;}}
 void show_record()
-    {system("cls");
-	char name[20];
+    {char name[20];
 	float scr;
 	FILE *f;
 	f=fopen("score.txt","r");
@@ -319,10 +158,8 @@ void show_record()
 	printf("\n\n\t\t*************************************************************");
 	fclose(f);
 	getch();}
-
 void reset_score()
-    {system("cls");
-    float sc;
+    {float sc;
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r+");
@@ -330,10 +167,8 @@ void reset_score()
 	sc=0;
 	fprintf(f,"%s,%.2f",nm,sc);
     fclose(f);}
-
 void help()
-	{system("cls");
-    printf("\n\n                              HELP");
+	{printf("\n\n                              HELP");
     printf("\n -------------------------------------------------------------------------");
     printf("\n ......................... C program Quiz Game...........");
     printf("\n >> There are two rounds in the game, WARMUP ROUND & CHALLANGE ROUND");
@@ -349,10 +184,8 @@ void help()
     printf("\n >> No negative marking for wrong answers");
 
 	printf("\n\n\t*********************BEST OF LUCK*********************************");}
-
 void edit_score(float score, char plnm[20])
-	{system("cls");
-	float sc;
+	{float sc;
 	char nm[20];
 	FILE *f;
 	f=fopen("score.txt","r");
@@ -363,4 +196,4 @@ void edit_score(float score, char plnm[20])
 	    f=fopen("score.txt","w");
 	    fprintf(f,"%s\n%.2f",plnm,sc);
 	    fclose(f);
-}}
+	  }}
